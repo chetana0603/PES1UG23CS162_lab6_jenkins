@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''
                 docker rmi -f backend-app || true
-                docker build -t backend-app CC_LAB-6/backend
+                docker build -t backend-app PES1UG23CS1162_lab6_jenkins/backend
                 '''
             }
         }
@@ -30,7 +30,7 @@ pipeline {
                   -p 80:80 \
                   nginx
                 
-                docker cp CC_LAB-6/nginx/default.conf nginx-lb:/etc/nginx/conf.d/default.conf
+                docker cp PES1UG23CS162_lab6_jenkins/nginx/default.conf nginx-lb:/etc/nginx/conf.d/default.conf
                 docker exec nginx-lb nginx -s reload
                 '''
             }
