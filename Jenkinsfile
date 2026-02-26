@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''
                 docker rmi -f backend-app || true
-                docker build -t backend-app PES1UG23CS1162_lab6_jenkins/backend
+                docker build -t backend-app PES1UG23CS162_lab6_jenkins/backend
                 '''
             }
         }
